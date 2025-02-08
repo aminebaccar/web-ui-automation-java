@@ -1,0 +1,39 @@
+name: Selenium UI Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - CICD
+      - "test/**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ☕ Set Up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: 📦 Install Maven Dependencies
+        run: mvn clean install -DskipTests
+
+      - name: 🏃 Run Selenium Tests in Headless Mode on chrome
+        run: mvn test verify -Dheadless=true -Dbrowser=chrome
+
+      - name: 📤 Upload Cucumber Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: target/cucumber-report-html/cucumber-html-reports
