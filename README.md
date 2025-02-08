@@ -1,6 +1,8 @@
 
 # 🚀 Web UI Automation Project
 
+[![Selenium UI Tests](https://github.com/aminebaccar/web-ui-automation-java/actions/workflows/.selenium-ci.yml/badge.svg)](https://github.com/aminebaccar/web-ui-automation-java/actions/workflows/.selenium-ci.yml)
+
 ## 📌 Overview  
 This project automates tests on a website UI using **Selenium WebDriver**, **Cucumber (BDD)**, and **TestNG**.  
 It supports **cross-browser testing, logging, and reporting** with **headless execution** in CI/CD.
