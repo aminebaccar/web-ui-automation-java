@@ -152,6 +152,23 @@ type logs\test-execution.log     # Windows
 
 ---
 
+### **🔄 CI/CD Integration**  
+This project uses **GitHub Actions** for automated **Web UI testing**.  
+Tests run on **every push, pull request, or manual trigger**.  
+
+📂 **GitHub Actions Workflow:** `.github/workflows/ui-tests.yml`  
+
+- Executes **Selenium WebDriver tests** using **Cucumber, TestNG, and Java**.  
+- Runs tests across multiple browsers (Chrome, Firefox).  
+- Captures **screenshots on failure** and uploads them as **GitHub Actions artifacts**.  
+- Generates **Cucumber HTML reports** for test execution results.  
+
+### **🔹 Manually Trigger:**  
+1. Go to **GitHub Actions** → Select **UI Automation Workflow**  
+2. Click **"Run workflow"** to execute the tests manually.  
+
+---
+
 ## 🎯 **Key Features**
 ✅ **Cross-browser support** (Chrome, Firefox, Edge).  
 ✅ **Headless execution support** for faster CI/CD runs.  
