@@ -159,7 +159,7 @@ Tests run on **every push, pull request, or manual trigger**.
 📂 **GitHub Actions Workflow:** `.github/workflows/.selenium-ci.yml`  
 
 - Executes **Selenium WebDriver tests** using **Cucumber, TestNG, and Java**.  
-- Runs tests across multiple browsers (Chrome, Firefox).  
+- Runs tests across multiple browsers (Chrome, Edge, Firefox).  
 - Captures **screenshots on failure** and uploads them as **GitHub Actions artifacts**.  
 - Generates **Cucumber HTML reports** for test execution results.  
 
